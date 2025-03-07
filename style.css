@@ -1,0 +1,146 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 400px;
+    border-bottom-right-radius: 43%;
+}
+.input-group-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:30px;
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+input {
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
+    font-weight: bold;
+    height: 30px;
+}
+input:focus {
+    border-color: #7c4dff;
+    outline: none;
+}
+input.error {
+    border: 2px solid red;
+}
+.error-message {
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    top: 80px;
+    font-style: italic;
+    width: 120px;
+}
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    margin-top: 30px;
+}
+.button-container::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 60px;
+    top: 50%;
+    height: 2px;
+    background: #7c4dff;
+}
+button {
+    background: #7c4dff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+    z-index: 1;
+}
+button:hover {
+    background: #5a2cc8;
+}
+h2 {
+    color: #7c4dff;
+}
+.result {
+    font-size: 50px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+}
+.highlight {
+    color: #7c4dff;
+}
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+        border-bottom-right-radius: 37%;
+    }
+
+    .input-group-container {
+        align-items: center;
+    }
+
+
+    input {
+        font-size: 14px;
+        width: 80px;
+    }
+
+    .button-container {
+        justify-content: center;
+        margin-top: 20px;
+        position: relative;
+    }
+
+    .button-container::before {
+        left: 10%;
+        right: 10%;
+    }
+
+    .result {
+       font-size: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    input {
+        font-size: 12px;
+        height: 25px;
+        width: 80px;
+    }
+
+    .result {
+        font-size: 30px;
+    }
+}
+
